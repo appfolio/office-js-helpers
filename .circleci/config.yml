@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+  build_and_test:
+    docker:
+      - image: cimg/node:14.18.0
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      # run tests!
+      - run: yarn test
+
+      - run: yarn build
+
+workflows:
+  build_and_test:
+    jobs:
+      - build_and_test:
+          context: appfolio_test_context
