@@ -1,10 +1,13 @@
 {
-  "name": "@microsoft/office-js-helpers",
+  "name": "@appfolio/office-js-helpers",
   "description": "A collection of helpers to simplify development of Office Add-ins & Microsoft Teams Tabs",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OfficeDev/office-js-helpers.git"
+    "url": "https://github.com/appfolio/office-js-helpers.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "clean": "rimraf dist dts",
@@ -66,11 +69,11 @@
     "Storage",
     "Helpers"
   ],
-  "author": "Microsoft",
+  "author": "AppFolio",
   "bugs": {
-    "url": "https://github.com/OfficeDev/office-js-helpers/issues"
+    "url": "https://github.com/appfolio/office-js-helpers/issues"
   },
-  "homepage": "https://github.com/OfficeDev/office-js-helpers#readme",
+  "homepage": "https://github.com/appfolio/office-js-helpers#readme",
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",
