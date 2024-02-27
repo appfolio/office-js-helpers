@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  title: office-js-helpers
+  description: This catalog entity description has been auto-generated
+  tags: []
+  annotations:
+    appfolio.com/package-location: url:https://github.com/appfolio/office-js-helpers/pkgs/npm/office-js-helpers
+    appfolio.com/package-type: npm
+  name: office-js-helpers
+spec:
+  type: library
+  lifecycle: unknown
+  owner: engineering
