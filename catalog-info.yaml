@@ -2,7 +2,11 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   title: office-js-helpers
-  description: This catalog entity description has been auto-generated
+  description: >
+    This library is a fork of an open-source repo of
+    helpers for Office Add-ins. I think our
+    [Excel Integration App](https://github.com/appfolio/excel_integration_app/)
+    uses it to authenticate to APM.
   tags: []
   annotations:
     appfolio.com/package-location: url:https://github.com/appfolio/office-js-helpers/pkgs/npm/office-js-helpers
@@ -10,5 +14,5 @@ metadata:
   name: office-js-helpers
 spec:
   type: library
-  lifecycle: unknown
-  owner: engineering
+  lifecycle: maintenance
+  owner: weird-algorithm
